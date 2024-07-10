@@ -15,20 +15,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <main>
+    <main class="weather_container" id="weather_container">
         <section class="searchBar" id="searchBar">
             <form action="" id="search_form" class="search_form" role="search">
                 <!-- <label for="searchBar_info">Enter Location</label> -->
                 <input id="searchBar_info" type="text" class="searchBar_info" role="searchbox" placeholder="City, State, Country or Zip">
-                <button id="search_btn" class="search_btn">
+                <button id="search_btn" class="search_btn button">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fas fa-sync fa-spin"></i>
+                    <i class="fas fa-sync fa-spin hide"></i>
                 </button>
             </form>
         </section>
+        <nav class="navBar_menu">
+            <!-- Empty list, will dynamically populate using JS -->
+            <ul class="navBar_list"></ul>
+        </nav>
         <section class="currentWeather" id="currentWeather">
             <h2 id="currentConditions" class="currentConditions">Current Conditions</h2>
             <!-- Dynamically populated with JavaScript -->
