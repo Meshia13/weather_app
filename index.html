@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -11,11 +22,24 @@
         <section class="searchBar" id="searchBar">
             <form action="" id="search_form" class="search_form" role="search">
                 <!-- <label for="searchBar_info">Enter Location</label> -->
-                <input id="searchBar_info" type="text" class="searchBar_info" role="searchbox" placeholder="Enter City">
+                <input id="searchBar_info" type="text" class="searchBar_info" role="searchbox" placeholder="City, State, Country or Zip">
+                <button id="search_btn" class="search_btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fas fa-sync fa-spin"></i>
+                </button>
             </form>
         </section>
-        <section class="currentWeather" id="currentWeather"></section>
-        <section class="dailyWeather" id="dailyWeather"></section>
+        <section class="currentWeather" id="currentWeather">
+            <h2 id="currentConditions" class="currentConditions">Current Conditions</h2>
+            <!-- Dynamically populated with JavaScript -->
+            <div id="currentForecast" class="currentForecast"></div>
+        </section>
+        <hr>
+        <section class="dailyWeather" id="dailyWeather">
+            <h2 class="dailyWeather_title" id="dailyWeather_title">Seven Day Forecast</h2>
+            <div class="dailyWeather_content" id="dailyWeather_content"></div>
+        </section>
+        <p class="offscreen" id="confirmation" aria-live="assertive"></p>
     </main>
     
 </body>
