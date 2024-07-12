@@ -15,49 +15,133 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
 
-    <main class="weather_container" id="weather_container">
+    <main class="weather-container" id="weather-container">
+
+        <!-- Search Bar -->
         <section class="searchBar" id="searchBar">
             <form action="" id="search_form" class="search_form" role="search">
-                <!-- <label for="searchBar_info">Enter Location</label> -->
+                <label for="searchBar_info">Enter Location</label>
                 <input id="searchBar_info" type="text" class="searchBar_info" role="searchbox" placeholder="City, State, Country or Zip">
                 <button id="search_btn" class="search_btn button">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fas fa-sync fa-spin hide"></i>
+                    <!-- <i class="fas fa-sync fa-spin hide"></i> -->
                 </button>
             </form>
         </section>
-        <nav class="navBar_menu">
-            <!-- Empty list, will dynamically populate using JS -->
-            <ul class="navBar_list"></ul>
-        </nav>
-        <section class="currentWeather" id="currentWeather">
-            <h2 id="currentConditions" class="currentConditions">Current Conditions</h2>
-            <!-- Dynamically populated with JavaScript -->
-            <div id="currentForecast" class="currentForecast">
 
-                <!-- This is dynamically generated. Will remove later -->
-                 <div class="icon" id="icon"><i class="fa-regular fa-sun" title="sunny"></i></div>
-                 <div class="temp">82°<div class="unit">F</div></div>
-                 <div class="descr">Sunny</div>
-                 <div class="feels">Feels like 89°</div>
-                 <div class="maxtemp">High 87°</div>
-                 <div class="mintemp">Low 61°</div>
-                 <div class="humidity">Humidity 40%</div>
-                 <div class="wind">Wind 3mph</div>
+        <!-- Current Weather -->
+        <section class="currentForecast" id="currentForecast">
 
+            <div class="currentWeather-container" id="currentWeather-container">
+                <div class="currentWeather-temp" id="currentWeather-temp">
+                    <!-- This is dynamically generated -->
+                    <img src="" alt="weather icon">
+                    <div class="icon" id="icon"><i class="fa-regular fa-sun" title="sunny"></i></div>
+                    <div class="temp">82°<div class="unit">F</div></div>
+                    <div class="descr">Sunny</div>
+                    <div class="feels">Feels like 89°</div>
+                </div>
+            
+                <!-- Generate Dynamically -->
+                <div class="currentForecast-items" id="currentForecast-items">
+                    <div class="weather-temp">
+                        <div class="maxtemp">High</div>
+                        <div class="maxtemp">87°</div>
+                    </div>
+                    <div class="weather-temp">
+                        <div class="mintemp">Low</div>
+                        <div class="mintemp">61°</div>
+                    </div>
+                    <div class="weather-temp">
+                        <div class="wind">Wind</div>
+                        <div class="wind">333</div>
+                    </div>
+                    <div class="weather-temp">
+                        <div class="humidity">Humidity</div>
+                        <div class="humidity">40%</div>
+                    </div>
+                        <!-- <div class="mintemp">Low 61°</div>
+                        <div class="humidity">Humidity 40%</div>
+                        <div class="wind">Wind 3mph</div>
+                        <div class="sunrise">Sunrise 5:54 am</div>
+                        <div class="sunset">Sunset 7:59 pm</div> -->
+                    
+                </div>
             </div>
+
         </section>
-        <hr>
-        <section class="dailyWeather" id="dailyWeather">
-            <h2 class="dailyWeather_title" id="dailyWeather_title">Seven Day Forecast</h2>
-            <div class="dailyWeather_content" id="dailyWeather_content"></div>
+
+        <!-- Geographical Location -->
+        <section class="location" id="location">
+
+            <div class="location-container" id="location-container">
+                <div class="time-zone" id="time-zone">New York</div>
+                <div class="country" id="country">US</div>
+            </div>
+
         </section>
-        <p class="offscreen" id="confirmation" aria-live="assertive"></p>
+
+        <!-- Six Day Forecast -->
+        <section class="dailyForecast" id="dailyForecast">
+
+            <div class="dailyForecast-container" id="dailyForecast-container">
+
+                <div class="dailyForecast-items" id="dailyForecast-items">
+                    <div class="day">Mon</div>
+                    <img src="" alt="weather icon">
+                    <div class="sunrise">Sunrise 5:54 am</div>
+                    <div class="sunset">Sunset 7:59 pm</div>
+                </div>
+
+                <div class="dailyForecast-items" id="dailyForecast-items">
+                    <div class="day">Tue</div>
+                    <img src="" alt="weather icon">
+                    <div class="sunrise">Sunrise 5:54 am</div>
+                    <div class="sunset">Sunset 7:59 pm</div>
+                </div>
+
+                <div class="dailyForecast-items" id="dailyForecast-items">
+                    <div class="day">Wed</div>
+                    <img src="" alt="weather icon">
+                    <div class="sunrise">Sunrise 5:54 am</div>
+                    <div class="sunset">Sunset 7:59 pm</div>
+                </div>
+
+                <div class="dailyForecast-items" id="dailyForecast-items">
+                    <div class="day">Thu</div>
+                    <img src="" alt="weather icon">
+                    <div class="sunrise">Sunrise 5:54 am</div>
+                    <div class="sunset">Sunset 7:59 pm</div>
+                </div>
+
+                <div class="dailyForecast-items" id="dailyForecast-items">
+                    <div class="day">Fri</div>
+                    <img src="" alt="weather icon">
+                    <div class="sunrise">Sunrise 5:54 am</div>
+                    <div class="sunset">Sunset 7:59 pm</div>
+                </div>
+
+                <div class="dailyForecast-items" id="dailyForecast-items">
+                    <div class="day">Sat</div>
+                    <img src="" alt="weather icon">
+                    <div class="sunrise">Sunrise 5:54 am</div>
+                    <div class="sunset">Sunset 7:59 pm</div>
+                </div>
+            </div>
+
+        </section>
+
     </main>
+
+   
     
+
+    <script src="assets/js/app.js"></script>
+
 </body>
 </html>
