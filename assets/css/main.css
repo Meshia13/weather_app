@@ -73,3 +73,21 @@ body {
     margin: 0 20px;
     border: 1px solid greenyellow;
 }
+
+.dailyForecast-items .day {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.dailyForecast-items .sun-time {
+    font-weight: 100;
+}
+
+/* .dailyForecast-items .dayNight-temp {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+} */
