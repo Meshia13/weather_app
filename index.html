@@ -20,10 +20,42 @@
 </head>
 <body>
 
+    <header class="page_header">
+        <nav class="navBar_buttons">
+
+            <button class="button" id="home" aria-label="">
+                <i class="fa-solid fa-house"></i>
+                <p>Home</p>
+            </button>
+
+            <button class="button" id="today" aria-label="Get today's current weather">
+                <i class="fa-solid fa-calendar-day"></i>
+                <p>Today</p>
+            </button>
+
+            <button class="button" id="hourly" aria-label="Get the hourly weather for today">
+                <i class="fa-solid fa-clock"></i>
+                <p>Hourly</p>
+            </button>
+
+            <button class="button" id="weekly" aria-label="Get the weather for the next seven days">
+                <i class="fa-solid fa-calendar-week"></i>
+                <p>Weekly</p>
+            </button>
+
+            <button class="button" id="refresh" aria-label="Refresh to current weather conditions">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <p>Refresh</p>
+            </button>
+
+        </nav>
+        
+    </header>
+
     <main class="weather-container" id="weather-container">
 
         <!-- Search Bar -->
-        <section class="searchBar" id="searchBar">
+        <section class="searchBar" id="searchBar" data-nav="searchBar">
             <form action="" id="search_form" class="search_form" role="search">
                 <label for="searchBar_info">Enter Location</label>
                 <input id="searchBar_info" type="text" class="searchBar_info" role="searchbox" placeholder="City, State, Country or Zip">
@@ -35,7 +67,7 @@
         </section>
 
         <!-- Current Weather -->
-        <section class="currentForecast" id="currentForecast">
+        <section class="currentForecast" id="currentForecast" data-nav="currentForecast">
 
             <div class="currentWeather-container" id="currentWeather-container">
                 <div class="currentWeather-temp" id="currentWeather-temp">
@@ -82,7 +114,7 @@
         </section> -->
 
         <!-- Seven Day Forecast -->
-   <section class="dailyForecast" id="dailyForecast">
+   <section class="dailyForecast" id="dailyForecast" data-nav="dailyForecast">
 
     <div class="dailyForecast-container" id="dailyForecast-container">
 
